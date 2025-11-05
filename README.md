@@ -38,4 +38,4 @@ Currently in **closed testing** on Google Play Console with a planned production
 # Clone the repo
 git clone https://github.com/vishalbharti08/prompt-studio-android.git
 # Open in Android Studio and sync Gradle
-# Insert your OpenAI API key in local.properties or secrets.xml
+
