@@ -17,7 +17,7 @@ Currently in **closed testing** on Google Play Console with a planned production
 ## 🧠 Tech Stack
 | Layer | Technologies |
 |-------|---------------|
-| **Language** | Kotlin |
+| **Language** | JAVA |
 | **Architecture** | MVVM |
 | **Networking** | Retrofit2 + OkHttp |
 | **UI** | Material 3 Components |
