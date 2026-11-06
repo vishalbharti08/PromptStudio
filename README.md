@@ -1,41 +1,29 @@
-# 🤖 Prompt Studio (Pre-Release)
+# Prompt Studio
 
-AI-powered Android app for testing and fine-tuning OpenAI prompt parameters directly from mobile.  
-Currently in **closed testing** on Google Play Console with a planned production release in 2025.
+An Android app for trying OpenAI chat prompts from a phone: set the model, system prompt, temperature, top-p and max tokens, send the request, and read the raw response. I built it during my 2024 internship at CoolBoots Media as an internal tool for testing AI-driven features. It's in closed testing on Google Play.
 
----
+## What it does
 
-## 🚀 Features
-- Real-time prompt experimentation using **OpenAI API**
-- Adjustable parameters (temperature, top-p, max tokens)
-- JSON viewer for structured output visualization
-- Dark-mode UI with persistent session history
-- Built-in API key configuration for secure use
+- Choose a model from a dropdown (defaults to `gpt-3.5-turbo`)
+- Set the system and user prompts, temperature, top-p and max tokens
+- Send the request to the OpenAI Chat Completions API and show the JSON response
+- You enter your own API key in the app; none is stored in this repo
 
----
+## How it's built
 
-## 🧠 Tech Stack
-| Layer | Technologies |
-|-------|---------------|
-| **Language** | JAVA |
-| **Architecture** | MVVM |
-| **Networking** | Retrofit2 + OkHttp |
-| **UI** | Material 3 Components |
-| **Backend API** | OpenAI GPT API |
-| **Build & Deploy** | Android Studio, Gradle, Google Play Console |
+| | |
+|---|---|
+| Language | Java |
+| UI | Android Views, Material Components |
+| Networking | OkHttp, with Gson for request and response models |
+| Min/target | see `app/build.gradle.kts` |
 
----
+All of the logic lives in `MainActivity.java`, which builds the request and sends it with OkHttp.
 
-## 📱 Play Store Status
-- **Stage:** Closed testing (11 testers opted in)  
-- **Next milestone:** Reach 12 testers, maintain 14-day closed test  
-- **Target:** Public release on Play Store — Q1 2025  
+## Run it
 
----
-
-## ⚙️ Local Setup
 ```bash
-# Clone the repo
-git clone https://github.com/vishalbharti08/prompt-studio-android.git
-# Open in Android Studio and sync Gradle
+git clone https://github.com/vishalbharti08/PromptStudio.git
+```
 
+Open the project in Android Studio, let Gradle sync, and run the `app` configuration on a device or emulator. Paste your OpenAI API key into the app to send requests.
